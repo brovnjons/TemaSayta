@@ -6,10 +6,10 @@
 
 # This file contains the structure for the top navigation and bottom footer
 
-- title: Application Guidelines
+- title: Значення1
   url: /application-guidelines/lorem-ipsum-one/second-level-a/
   sub-links:
-  - title: Second Level A
+  - title: Підминю
     url: /application-guidelines/lorem-ipsum-one/second-level-a/
   - title: Second Level B
     url: /application-guidelines/lorem-ipsum-two/part-A/
@@ -34,7 +34,7 @@
     url: /resource_room/forms-and-templates/
   - title: Guides
     url: /resource_room/guides/
-- title: 你好 மெய்யெழுத்து
+- title: Що таке
   url: /who-we-are/
 - title: Contact Us
   url: /contact-us/
