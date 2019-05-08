@@ -7,7 +7,7 @@
             <a href="{{- site.baseurl -}}{{- post.url | relative_url | append: '.html'}}" class="has-text-grey-dark">{{- post.title | truncatewords : 10}}</a>
         </h4>
         <small class="date has-text-grey">
-            {{- post.date | date_to_string -}}
+            {{- post.date | date: "%d/%m/%Y" -}}
         </small>
     </div>
 </div>
@@ -16,7 +16,7 @@
     <div class="bg-{{post.categories[1] | replace: '-&' , ''}} padding--lg"  style="height:100%">
         <small class="has-text-white padding--bottom--lg">{{- post.categories[1] | upcase | replace: '-', ' ' -}}</small>
         <h4 class="title"><a href="{{- site.baseurl -}}{{- post.url | relative_url | append: '.html' -}}" class="has-text-white">{{- post.title -}}</a></h4>
-        <small class="has-text-white">{{- post.date | date_to_string | upcase -}}</small>
+        <small class="has-text-white">{{- post.date | date: "%d/%m/%Y" -}}</small>
     </div>
 </div>
 {%- endif -%} {%- endcomment -%}
