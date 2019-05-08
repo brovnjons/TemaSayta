@@ -48,9 +48,9 @@ layout: default
                         <span class="bp-sec-button">
                             {%- if category_name == site.resources_name -%}
                                 {%- if page_url_no_whitespace == category_url -%}
-                                    <a href="{{site.baseurl}}/{{site.resources_name}}/" class="is-uppercase media-category-button selected"><b>ALL</b></a>
+                                    <a href="{{site.baseurl}}/{{site.resources_name}}/" class="is-uppercase media-category-button selected"><b>Усі</b></a>
                                 {%- else -%}
-                                    <a href="{{site.baseurl}}/{{site.resources_name}}/" class="is-uppercase media-category-button"><b>ALL</b></a>
+                                    <a href="{{site.baseurl}}/{{site.resources_name}}/" class="is-uppercase media-category-button"><b>Усі</b></a>
                                 {%- endif -%}
                             {%- else -%}
                                 {%- if page_url_no_whitespace == category_url -%}
@@ -71,7 +71,7 @@ layout: default
                     <a class="bp-dropdown-button hero-dropdown is-centered padding--none" aria-haspopup="true" aria-controls="hero-dropdown-menu">
                     <div class="bp-dropdown-trigger">
                         <span class="sgds-icon sgds-icon-chevron-down is-size-4 has-text-black" id="filter-arrow"></span>
-                        <div class="sgds-selector has-text-black" id="sgds-selector-text-desktop">Recent</div>
+                        <div class="sgds-selector has-text-black" id="sgds-selector-text-desktop">Останні</div>
                     </div>
                     </a>
                     <div class="bp-dropdown-menu has-text-left" id="hero-dropdown-menu" role="menu" >
@@ -90,7 +90,7 @@ layout: default
                 <div class="filter-selector-div is-hidden-desktop">
                     <span class="sgds-icon sgds-icon-chevron-down is-size-4" id="filter-arrow"></span>
                     <select id="year-filter-mobile" class="sgds-selector">
-                        <option value="Recent">Recent</option>
+                        <option value="Recent">Останні</option>
                     </select>
                 </div>
             </div>
@@ -114,7 +114,7 @@ layout: default
                             </h4>
                         </div>
                         <small class="date has-text-grey">
-                            {{- post.date | date_to_string -}}
+                            {{- post.date | date: "%d/%m/%Y" -}}
                         </small>
                     </div>
                 </div> {%- endcomment -%}
@@ -148,7 +148,7 @@ layout: default
                             <h5 class="has-text-white padding--bottom--lg"><b>{{- post.title | truncatewords: 15 -}}</b></h5>
                         </div>
                         <div class="is-fluid padding--top--md description">
-                            <small class="has-text-white">{{- post.date | date_to_string | upcase -}}</small>
+                            <small class="has-text-white">{{- post.date | date: "%d/%m/%Y" -}}</small>
                             {%- if post.file_url -%}
                                 <small class="has-text-white">
                                     <span class="sgds-icon sgds-icon-download align-right is-size-4"></span>
