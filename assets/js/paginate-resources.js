@@ -24,7 +24,7 @@ function paginateResources() {
   var currYear = new Date().getFullYear();
   displayFilterDropdown(earliestYear, currYear);
 
-  var selectedYear = "Останні";
+  var selectedYear = "Recent";
   applyFilter(selectedYear);
 }
 
