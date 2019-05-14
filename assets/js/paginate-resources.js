@@ -12,7 +12,7 @@ var filteredArray = void 0;
 
 paginateResources();
 
-document.getElementById('apply-filter-recent').addEventListener('click', () => applyFilter('Recent'));
+document.getElementById('apply-filter-recent').addEventListener('click', () => applyFilter('Останні'));
 document.getElementById('year-filter-mobile').addEventListener('change', (event) => applyFilter(event.target.value));
 
 // Main function to paginate resource page
@@ -24,13 +24,13 @@ function paginateResources() {
   var currYear = new Date().getFullYear();
   displayFilterDropdown(earliestYear, currYear);
 
-  var selectedYear = "Recent";
+  var selectedYear = "Останні";
   applyFilter(selectedYear);
 }
 
 function applyFilter(selectedYear) {
   hideAllPostsAndPagination();
-
+if(selectedYear==="Останні"){selectedYear="Recent";}
   // Only keep posts in the selected year
   filteredArray = extractPostsByYear(selectedYear);
 
