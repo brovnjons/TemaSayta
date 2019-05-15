@@ -30,7 +30,7 @@ function paginateResources() {
 
 function applyFilter(selectedYear) {
   hideAllPostsAndPagination();
-//if(selectedYear==="Останні"){selectedYear="Recent";}
+if(selectedYear==="Останні"){selectedYear="Recent";}
   // Only keep posts in the selected year
   filteredArray = extractPostsByYear(selectedYear);
 
@@ -38,7 +38,7 @@ function applyFilter(selectedYear) {
   unhideChunk(currentPageIndex, currentPageIndex);
 
   var filterDropdownDesktop = document.getElementById('sgds-selector-text-desktop');
-  filterDropdownDesktop.innerHTML = selectedYear;
+  filterDropdownDesktop.innerHTML = "Останні";
 
   if (!filteredArray.length || filteredArray.length <= PAGE_SIZE) return;
   displayPagination();
