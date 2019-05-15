@@ -30,7 +30,7 @@ function paginateResources() {
 
 function applyFilter(selectedYear) {
   hideAllPostsAndPagination();
-if(selectedYear==="Останні"){selectedYear="Recent";}
+//if(selectedYear==="Останні"){selectedYear="Recent";}
   // Only keep posts in the selected year
   filteredArray = extractPostsByYear(selectedYear);
 
