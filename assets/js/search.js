@@ -154,9 +154,9 @@ function returnResultsList(results) {
 function displaySearchResults(searchTerm) {
   document.getElementById("loading-spinner").style.display = 'none';
   var searchResultsCount = document.getElementById('search-results-count');
-  searchResultsCount.innerHTML = results.length + " result";
-  searchResultsCount.innerHTML += (results.length === 1) ? " " : "s "; 
-  searchResultsCount.innerHTML += "for '" + searchTerm + "'";
+  searchResultsCount.innerHTML = results.length + " результат";
+  searchResultsCount.innerHTML += (results.length === 1) ? " " : "и "; 
+  searchResultsCount.innerHTML += "по запиту '" + searchTerm + "'";
   document.getElementsByName('query')[1].setAttribute("value", searchTerm);
 
   paginateSearchResults();
@@ -168,7 +168,7 @@ function paginateSearchResults() {
   if (!results.length) return;
   var searchPageIndicator = document.getElementById('search-page-indicator');
   searchPageIndicator.style.display = pageResults.length > 1 ? "flex" : "none";
-  searchPageIndicator.innerHTML = "Page " + (currentPageIndex + 1) + " of " + pageResults.length;
+  searchPageIndicator.innerHTML = "Сторінка " + (currentPageIndex + 1) + " з " + pageResults.length;
 
   var searchResults = document.getElementById('search-results');
   searchResults.innerHTML = returnResultsList(pageResults[currentPageIndex]);
