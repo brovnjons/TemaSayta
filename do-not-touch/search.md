@@ -1,6 +1,6 @@
 ---
 layout: search
-title: Search
+title: Пошук
 permalink: /search/
 breadcrumb: Search
 ---
