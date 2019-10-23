@@ -50,7 +50,7 @@ collections:
     output: true
 
 # Resource Room and Pagination
-resources_name: "resource_room"
+resources_name: "news"
 paginate: 12
 
 # Site configuration for Isomer Pages
