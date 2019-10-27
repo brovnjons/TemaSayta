@@ -13,7 +13,7 @@ var currentPageIndex = 0;
 var runSearch = function runSearch(json_data, posts_data) {
   postsData = posts_data;
   var searchTerm = getQueryVariable('query');
-
+console.log(searchTerm);
   if (!searchTerm || searchTerm === '+') {
     searchTerm = ' ';
   }
@@ -21,6 +21,7 @@ var runSearch = function runSearch(json_data, posts_data) {
   if (searchTerm) {
     document.getElementById('search-box-search').value = searchTerm;
     // Load the pre-built lunr index
+    console.log(searchTerm);
     var idx = lunr.Index.load(JSON.parse(json_data));
 
     // Get lunr to perform a search
