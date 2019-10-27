@@ -11,8 +11,7 @@ onmessage = function(event) {
 	  this.field('url');
 	  this.field('title');
 	  this.field('content');
-	  this.metadataWhitelist = ['position'];
-          this.pipeline.remove(lunr.stopWordFilter);
+	  this.metadataWhitelist = ['position'];       
           this.use(lunr.ru);
      
 
