@@ -7,12 +7,13 @@ onmessage = function(event) {
 	var documents = event.data;
 
 	var index = lunr(function () {
+	  this.use(lunr.ru);
 	  this.ref('id');
 	  this.field('url');
 	  this.field('title');
 	  this.field('content');
 	  this.metadataWhitelist = ['position'];       
-          this.use(lunr.ru);
+          
      
 
 	  documents.forEach(function(doc) {
