@@ -1,7 +1,8 @@
 onmessage = function(event) {
 	self.importScripts('https://unpkg.com/lunr/lunr.js');
+	importScripts('/assets/js/lunr.stemmer.support.js');
 	importScripts('/assets/js/lunr.ru.js');
-        importScripts('/assets/js/lunr.stemmer.support.js');
+        
 	
 	var documents = event.data;
 
