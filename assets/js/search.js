@@ -21,10 +21,9 @@ var runSearch = function runSearch(json_data, posts_data) {
   if (searchTerm) {
     document.getElementById('search-box-search').value = searchTerm;
     // Load the pre-built lunr index
-    lunr.multiLanguage('en', 'ru');
     var idx = lunr.Index.load(JSON.parse(json_data));
  // use the language (ru)
-  //this.use(lunr.ru);
+  this.use(lunr.ru);
     // Get lunr to perform a search
     results = idx.search(searchTerm);
     pageResults = splitPages(results, RESULTS_PER_PAGE);
