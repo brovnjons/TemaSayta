@@ -1,13 +1,15 @@
 onmessage = function(event) {
 	self.importScripts('https://unpkg.com/lunr/lunr.js');
-	importScripts('/assets/js/lunr.stemmer.support.js');
-	importScripts('/assets/js/lunr.ru.js');
-        
+	//importScripts('/assets/js/lunr.stemmer.support.js');
+	//importScripts('/assets/js/lunr.ru.js');
+	//--
+       // <script src="{{- "/assets/js/lunr.stemmer.support.js" | relative_url -}}" crossorigin="anonymous"></script>
+//<script src="{{- "/assets/js/lunr.ru.js" | relative_url -}}" crossorigin="anonymous"></script>
 	
 	var documents = event.data;
 
 	var index = lunr(function () {
-	  this.use(lunr.ru);
+	 // this.use(lunr.ru);
 	  this.ref('id');
 	  this.field('url');
 	  this.field('title');
