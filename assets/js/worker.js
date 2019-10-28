@@ -3,7 +3,7 @@ onmessage = function(event) {
 	//importScripts('/assets/js/lunr.stemmer.support.js');
 	//importScripts('/assets/js/lunr.ru.js');
 	//importScripts('/assets/js/lunr.multi.js');
-	//-- {%- if page.layout == 'search' -%}
+	//page.layout search 
        // <script src="{{- "/assets/js/lunr.stemmer.support.js" | relative_url -}}" crossorigin="anonymous"></script>
 //<script src="{{- "/assets/js/lunr.ru.js" | relative_url -}}" crossorigin="anonymous"></script>
 	//<script src="{{- "/assets/js/lunr.multi.js" | relative_url -}}" crossorigin="anonymous"></script>
