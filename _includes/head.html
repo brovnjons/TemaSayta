@@ -43,5 +43,5 @@
     
     {%- include wogaa-scripts.html -%}
     
-    <title>{{- page.title -}}</title>
+    <title>{% if page.layout == "homepage" %}{{- page.title -}}{% else %}{{- page.title -}} / {{- site.title -}}{% endif %}</title>
 </head>
