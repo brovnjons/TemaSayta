@@ -116,7 +116,7 @@
           <div class="col padding--top--sm padding--bottom--sm is-right-desktop-only">
             <ul>
                <li class="is-inline-block-desktop-only">
-                   <p><a href="{{site.baseurl}}/contact-us/">Зв'яжіться з нами</a></p>
+                   <p><a href="{{site.baseurl}}/kontakty/">Зв'яжіться з нами</a></p>
                </li>
                {%- if homepage.show-reach and homepage.show-reach == true -%}
                <li class="is-inline-block-desktop-only">
@@ -125,7 +125,8 @@
                {%- endif -%}
                {%- if site.feedback_form_url -%}
                <li class="is-inline-block-desktop-only">
-                  <p><a href="{{site.feedback_form_url}}" target="_blank" rel="noreferrer">Feedback</a></p>
+                  <p><a href="{{site.feedback_form_url}}" target="_blank" rel="noreferrer">Зворотний зв'язок
+</a></p>
                </li>
                {%- endif -%}
                {%- assign homepage = site.data.homepage -%}
@@ -135,7 +136,7 @@
                   {%- if site.faq_url_external -%}
                     <p><a href="{{site.faq_url}}" target="_blank" rel="noreferrer">FAQ</a></p>
                   {%- else -%}
-                    <p><a href="{{site.baseurl}}{{site.faq_url}}">FAQ</a></p>
+                   {%- comment -%} <p><a href="{{site.baseurl}}{{site.faq_url}}">FAQ</a></p>{%- endcomment -%}
                   {%- endif -%}
                </li>
                {%- endif -%}
@@ -172,8 +173,8 @@
         <div class="row is-vcentered padding--top--sm">
             <div class="col is-two-thirds">
                 <ul>
-                    <li><a href="{{site.baseurl}}/terms-of-use/">Умови використання</a></li>
-                    <li><a href="https://Vkozar.pp.ua" target="_blank">Розробка</a></li>
+                    <li><a href="{{site.baseurl}}/terms-of-use/">Умови використання</a></li> 
+                    <li><a href="https://dev.vkozar.pp.ua" target="_blank">Розробка</a></li>
                     {%- comment -%} <li><a>Rate Service</a></li> {%- endcomment -%}
                 </ul>
             </div>
