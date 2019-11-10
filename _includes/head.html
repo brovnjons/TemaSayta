@@ -3,7 +3,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=yes, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta property="og:title" content="{% if page.layout == "homepage" %}{{- page.title -}}{% else %}{{- page.title -}} - {{- site.title -}}{% endif %}">
+    <meta property="og:title" content="{% if page.layout == "homepage" %}{{- page.title -}}{% else %}{{- page.title -}}  &nbsp; - &nbsp;  {{- site.title -}}{% endif %}">
     {%- comment -%} If page contains a description in the YML header of the markdown file, use the page description. Otherwise, take an excerpt of its markdown content {%- endcomment -%}
     <meta property="og:description" content="
         {%- if page.description -%}
@@ -41,7 +41,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,600" crossorigin="anonymous">
     {%- feed_meta -%}
     
-    {%- include wogaa-scripts.html -%}
+  {%- comment -%}   {%- include wogaa-scripts.html -%} {%- endcomment -%}
     
-    <title>{% if page.layout == "homepage" %}{{- page.title -}}{% else %}{{- page.title -}}   -   {{- site.title -}}{% endif %}</title>
+    <title>{% if page.layout == "homepage" %}{{- page.title -}}{% else %}{{- page.title -}} &nbsp; - &nbsp; {{- site.title -}}{% endif %}</title>
 </head>
