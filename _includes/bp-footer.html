@@ -173,7 +173,11 @@
         <div class="row is-vcentered padding--top--sm">
             <div class="col is-two-thirds">
                 <ul>
+                    {%- if site.termsuse1 -%}
                     <li><a href="{{site.baseurl}}/terms-of-use/">Умови використання</a></li> 
+                  {%- else -%}
+                   {%- comment -%} <p><a href="{{site.baseurl}}{{site.faq_url}}">FAQ</a></p>{%- endcomment -%}
+                  {%- endif -%}                    
                     <li><a href="https://dev.vkozar.pp.ua" target="_blank">Розробка</a></li>
                     {%- comment -%} <li><a>Rate Service</a></li> {%- endcomment -%}
                 </ul>
