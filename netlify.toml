@@ -1,3 +1,5 @@
+[build.environment]
+RUBY_VERSION = "3.1.0"
 [[headers]]
   for = "/*"
   [headers.values]
