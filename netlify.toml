@@ -1,6 +1,5 @@
 [build.environment]
 RUBY_VERSION = "3.1.0"
-GEM_HOME = "$NETLIFY_BUILD_BASE/.gems"
 [[headers]]
   for = "/*"
   [headers.values]
